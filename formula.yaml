@@ -5,7 +5,7 @@ bundle:
   vendor: Kubesphere Community
 buildSettings:
   docker:
-    base: jenkins/jenkins:2.176.2
+    base: jenkins4eval/jenkins:2.266 
     tag: kubesphere/ks-jenkins:2.176.2
     build: true
 war:
