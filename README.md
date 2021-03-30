@@ -13,7 +13,7 @@ The docker images are below:
 
 ## Build from source(kubesphere/jenkins-ks:2.176.2 arm64版本)
 
-> [jcli](https://github.com/jenkins-zh/jenkins-cli) is a handy tool which can generate jenkins.war and docker image by one command line,此处需要注意将settings.xml文件放置到root/.m2/settings.xml目录且需确保java与maven已经安装成功
+> [jcli](https://github.com/jenkins-zh/jenkins-cli) is a handy tool which can generate jenkins.war and docker image by one command line,此处需要注意将settings.xml文件放置到/root/.m2/settings.xml目录且需确保java与maven已经安装成功
 ```bash
 java -version
 
