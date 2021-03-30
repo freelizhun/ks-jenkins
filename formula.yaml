@@ -5,11 +5,11 @@ bundle:
   vendor: Kubesphere Community
 buildSettings:
   docker:
-    buildx: true
-    platform: linux/amd64,linux/arm64
+    #buildx: true
+    #platform: linux/amd64,linux/arm64
     base: jenkins4eval/jenkins:2.266
     tag: kubespheredev/ks-jenkins:2.266
-    output: push
+    #output: push
     build: true
 war:
   groupId: org.jenkins-ci.main
