@@ -43,7 +43,15 @@ jcli cwp --install-artifacts --config-path formula.yaml
 FROM busybox:latest
 COPY webroot/ /webroot/
 ```
-
+## maven的安装
+```
+tar -xvf  apache-maven-3.6.3-bin.tar.gz
+sudo mv -f apache-maven-3.6.3 /usr/local/
+vim /etc/profile
+export MAVEN_HOME=/usr/local/apache-maven-3.6.3
+export PATH=${PATH}:${MAVEN_HOME}/bin
+source /etc/profile
+```
 # Plugins
 Please pay attention to these plugins, we still need to keep use a special version of them:
 
