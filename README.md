@@ -13,7 +13,23 @@ The docker images are below:
 
 ## Build from source
 
-[jcli](https://github.com/jenkins-zh/jenkins-cli) is a handy tool which can generate jenkins.war and docker image by one command line.
+[jcli](https://github.com/jenkins-zh/jenkins-cli) is a handy tool which can generate jenkins.war and docker image by one command line,此处需要注意将settings.xml文件放置到root/.m2/settings.xml目录
+且需确保java与maven已经安装成功
+```bash
+java -version
+
+openjdk version "1.8.0_242"
+OpenJDK Runtime Environment (build 1.8.0_242-b08)
+OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
+
+mvn -v
+
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: /usr/local/apache-maven-3.6.3
+Java version: 1.8.0_242, vendor: Huawei Technologies Co., Ltd, runtime: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-1.h5.ky10.aarch64/jre
+Default locale: zh_CN, platform encoding: UTF-8
+OS name: "linux", version: "4.19.90-17.ky10.aarch64", arch: "aarch64", family: "unix"
+```
 
 `jcli cwp --install-artifacts --config-path formula.yaml`
 

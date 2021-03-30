@@ -1,0 +1,30 @@
+<settings>
+  <servers>
+     <server>
+      <id>github-a</id>
+      <username>freelizhun</username>
+      <password>c53a839408d5094a3280c7d640fb01b40c2fb4be</password>
+    </server>
+  </servers>
+  <activeProfiles>
+    <activeProfile>github</activeProfile>
+  </activeProfiles>
+  <profiles>
+    <profile>
+      <id>github</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>https://repo1.maven.org/maven2</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+        <repository>
+          <id>github-a</id>
+          <name>GitHub OWNER Apache Maven Packages</name>
+          <url>https://maven.pkg.github.com/LinuxSuRen/jenkins-build-monitor-plugin</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+</settings>
