@@ -11,10 +11,9 @@ The docker images are below:
 | official | `kubesphere/ks-jenkins:2.249.1` |
 | experimental | `kubespheredev/ks-jenkins:2.249.1` |
 
-## Build from source
+## Build from source(kubesphere/jenkins-ks:2.176.2 arm64版本)
 
-[jcli](https://github.com/jenkins-zh/jenkins-cli) is a handy tool which can generate jenkins.war and docker image by one command line,此处需要注意将settings.xml文件放置到root/.m2/settings.xml目录
-且需确保java与maven已经安装成功
+> [jcli](https://github.com/jenkins-zh/jenkins-cli) is a handy tool which can generate jenkins.war and docker image by one command line,此处需要注意将settings.xml文件放置到root/.m2/settings.xml目录且需确保java与maven已经安装成功
 ```bash
 java -version
 
@@ -31,7 +30,19 @@ Default locale: zh_CN, platform encoding: UTF-8
 OS name: "linux", version: "4.19.90-17.ky10.aarch64", arch: "aarch64", family: "unix"
 ```
 
-`jcli cwp --install-artifacts --config-path formula.yaml`
+```
+git clone https://github.com/kubesphere/ks-jenkins.git
+cd ks-jenkins
+git checkout arm64
+jcli cwp --install-artifacts --config-path formula.yaml
+```
+## kubesphere/jenkins-uc:v3.0.0 arm64版本编译
+> kubesphere/jenkins-uc:v3.0.0官方无Dockerfile文件，对于arm64的编译只需对x86镜像`kubesphere/jenkins-uc:v3.0.0`中的/webroot用 `docker cp` 命令拷贝到宿主机，
+然后构建如下Dockerfile即可
+```bash
+FROM busybox:latest
+COPY webroot/ /webroot/
+```
 
 # Plugins
 Please pay attention to these plugins, we still need to keep use a special version of them:
