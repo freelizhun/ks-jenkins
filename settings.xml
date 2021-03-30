@@ -2,8 +2,8 @@
   <servers>
      <server>
       <id>github-a</id>
-      <username>freelizhun</username>
-      <password>c53a839408d5094a3280c7d640fb01b40c2fb4be</password>
+      <username>your github name</username>
+      <password>your github token</password>
     </server>
   </servers>
   <activeProfiles>
